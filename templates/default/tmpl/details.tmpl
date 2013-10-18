@@ -14,6 +14,7 @@ if (data.defaultvalue && data.defaultvaluetype === 'object') {
         if (properties && properties.length && properties.forEach) { 
     ?>        
         <h3 class="subsection-title">Properties</h3>
+        <br />
         <?js= this.partial('properties.tmpl', properties) ?>
     <?js } ?>
 
