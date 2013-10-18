@@ -111,6 +111,11 @@
     ?>
         <h3 class="subsection-title">Methods</h3>
         
+        <dl><?js methods.forEach(function(m) {  ?>
+            <dt><?js= self.linkto(m.longname, m.name) ?></dt>
+            <?js if(m.description) { ?><dd>→ <?js= m.description ?></dd><?js }; ?>
+        <?js }); ?></dl>
+        
         <dl><?js methods.forEach(function(m) { ?>
             <?js= self.partial('method.tmpl', m) ?>
         <?js }); ?></dl>
