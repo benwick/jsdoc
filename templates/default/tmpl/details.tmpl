@@ -9,17 +9,15 @@ if (data.defaultvalue && data.defaultvaluetype === 'object') {
     defaultObjectClass = ' class="object-value"';
 }
 ?>
-<dl class="details">
     <?js
         var properties = data.properties;
         if (properties && properties.length && properties.forEach) { 
-    ?>
-        
-        <h5 class="subsection-title">Properties:</h5>
-        
-        <dl><?js= this.partial('properties.tmpl', properties) ?></dl>
-        
+    ?>        
+        <h3 class="subsection-title">Properties</h3>
+        <?js= this.partial('properties.tmpl', properties) ?>
     <?js } ?>
+
+    <dl class="details">
         
     <?js if (data.version) {?>
     <dt class="tag-version">Version:</dt>
